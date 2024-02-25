@@ -61,9 +61,9 @@ touchDragDropHandler.removeCallback('drop', myCallback );
 ```
 
 And that's it.\
-See the full demo [here](https://github.com/giorgiogilbert/touch-drag-n-drop/blob/main/demo/index.js), or launch it locally with
+See the full demo source code [here](https://github.com/giorgiogilbert/touch-drag-n-drop/blob/main/demo), or launch it locally with
 ```npm run demo```
-from within this repo, ord preview it live [here](http://www.giorgiogilberti.it/touch-drag-n-drop/index.html)
+from within this repo, or even preview it live [here](http://www.giorgiogilberti.it/touch-drag-n-drop/index.html)
 
 # Note:
 
@@ -87,3 +87,6 @@ registerDropEventCallback( () => {
     console.log('Something was dropped');
 })
 ```
+
+Also note that active event listeners are enforced to handle touch events. 
+This may result in degraded performance in scenarios with intensive use of scroll or other touch gestures.
