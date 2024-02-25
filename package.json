@@ -1,0 +1,37 @@
+{
+  "name": "touch-drag-n-drop",
+  "version": "1.0.0",
+  "description": "Vanilla JS library to handle drag 'n drop events on touch screen devices",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "build-demo": "browserify demo/index.js -o demo/bundle.js",
+    "launch-demo": "open demo/index.html",
+    "demo": "npm run build-demo && npm run launch-demo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giorgiogilbert/touch-drag-n-drop.git"
+  },
+  "keywords": [
+    "touch",
+    "touchscreen",
+    "drag",
+    "and",
+    "drop",
+    "drag",
+    "drop"
+  ],
+  "author": "Giorgio Gilberti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giorgiogilbert/touch-drag-n-drop/issues"
+  },
+  "homepage": "https://github.com/giorgiogilbert/touch-drag-n-drop#readme",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.3.1",
+    "jsdom": "^24.0.0",
+    "vitest": "^1.3.1"
+  }
+}
