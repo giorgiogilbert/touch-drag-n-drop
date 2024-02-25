@@ -8,7 +8,9 @@
     "coverage": "vitest run --coverage",
     "build-demo": "browserify demo/index.js -o demo/bundle.js",
     "launch-demo": "open demo/index.html",
-    "demo": "npm run build-demo && npm run launch-demo"
+    "demo": "npm run build-demo && npm run launch-demo",
+    "build-dist": "browserify dist/build.js -o dist/index.js",
+    "minify-dist": "uglifyjs dist/index.js -o dist/index.min.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,8 @@
   "devDependencies": {
     "@vitest/coverage-v8": "^1.3.1",
     "jsdom": "^24.0.0",
+    "terser": "^5.28.1",
+    "uglify-js": "^3.17.4",
     "vitest": "^1.3.1"
   }
 }
