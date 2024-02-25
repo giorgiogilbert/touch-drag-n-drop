@@ -130,6 +130,7 @@ const resetDragState = function ( handler ) {
 }
 const initEventListeners = function ( handler ) {
     handler.document.addEventListener('touchstart', event => {
+        event.preventDefault();
         const node = event.target
         if(!node.matches(handler.config.draggableSelector)) {
             resetDragState(handler);
@@ -144,8 +145,9 @@ const initEventListeners = function ( handler ) {
         handler.dragElementMatrix = matrix.getMatrix(node, window);
 
         handler.dragStart(event);
-    });
+    }, {passive: false});
     handler.document.addEventListener('touchmove', event => {
+        event.preventDefault();
         if(!handler.dragElement) return;
         handler.dragDeltaX = event.touches[0].clientX - handler.dragStartX;
         handler.dragDeltaY = event.touches[0].clientY - handler.dragStartY;
@@ -163,15 +165,16 @@ const initEventListeners = function ( handler ) {
             matchedDropTarget.setAttribute('data-touchDragOver', true);
             handler.dragEnter(matchedDropTarget, event);
         }
-    })
+    }, {passive: false});
     handler.document.addEventListener('touchend', event => {
+        event.preventDefault();
         const dropTarget = findMatchedDropTarget(handler, event);
         if( dropTarget ) {
             handler.drop(dropTarget, event);
         }
         handler.dragEnd(event);
         resetDragState(handler);
-    })
+    }, {passive: false});
 }
 const findMatchedDropTarget = function ( handler, event ) {
     const allDropTargets = handler.document.querySelectorAll(handler.config.droppableSelector);
