@@ -61,9 +61,9 @@ touchDragDropHandler.removeCallback('drop', myCallback );
 ```
 
 And that's it.\
-See the full demo [here](https://github.com/giorgiogilbert/touch-drag-n-drop/blob/main/demo/index.js) or launch it locally with
+See the full demo [here](https://github.com/giorgiogilbert/touch-drag-n-drop/blob/main/demo/index.js), or launch it locally with
 ```npm run demo```
-from within this repo
+from within this repo, ord preview it live [here](http://www.giorgiogilberti.it/touch-drag-n-drop/index.html)
 
 # Note:
 
