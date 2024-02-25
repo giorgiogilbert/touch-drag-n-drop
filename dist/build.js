@@ -1,1 +1,1 @@
-const touchDragNDrop = require('../index.js');
+window.touchDragNDrop = require('../index.js');
