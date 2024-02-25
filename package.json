@@ -1,6 +1,6 @@
 {
   "name": "touch-drag-n-drop",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Vanilla JS library to handle drag 'n drop events on touch screen devices",
   "main": "index.js",
   "scripts": {
